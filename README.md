@@ -11,7 +11,7 @@ e orientar o aluno Leonardo Fiedler na disciplina.
 
 ### Resumo
 
-Professor da disciplina: Gilvan Justino
-Ano: 2016
-Semestre: 3º
+Professor da disciplina: Gilvan Justino <br />
+Ano: 2016  <br />
+Semestre: 3º  <br />
 Aluno criador do repositório: Leonardo Fiedler.
