@@ -1,4 +1,4 @@
-package lista01.lista.encadeada.lista;
+package lista.common.exception;
 
 /**
  *

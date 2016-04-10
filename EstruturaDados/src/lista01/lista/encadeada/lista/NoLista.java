@@ -2,30 +2,34 @@ package lista01.lista.encadeada.lista;
 
 /**
  *
- * @author lfiedler
+ * @author Leonardo Fiedler
  */
-public class NoLista <T> {
-    private T info;
-    private NoLista<T> proximo;
+public class NoLista {
     
-    public void setInfo(T info)
-    {
-        this.info = info;
-    }
-    
-    public T getInfo()
-    {
-        return this.info;
-    }
-    
-    public void setProximo(NoLista proximo)
-    {
-        this.proximo = proximo;
-    }
-    
-    public NoLista<T> getProximo()
-    {
-        return this.proximo;
-    }
-
+	private int info;
+	private NoLista proximo;
+	
+	public NoLista(int info)
+	{ 
+		setInfo(info);
+	}
+	
+	public int getInfo() {
+		return info;
+	}
+	
+	public void setInfo(int info) {
+		this.info = info;
+	}
+	
+	public void setProximo(NoLista proximo)
+	{
+		this.proximo = proximo;
+	}
+	
+	public NoLista getProximo()
+	{
+		return proximo;
+	}
+	
 }

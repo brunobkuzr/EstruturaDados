@@ -1,13 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package lista01.lista.encadeada.lista;
+package lista.common.aluno;
 
 /**
  *
- * @author lfiedler
+ * @author Leonardo Fiedler
  */
 public class Aluno implements Comparable<Aluno> {
     private String nome;
@@ -64,7 +59,7 @@ public class Aluno implements Comparable<Aluno> {
 	public String toString() {
 		return "Nome: " + this.getNome() + "\n" +
 			   "CPF: " + this.getCpf() + "\n"	+
-				"Matrícula: " + this.getMatricula();
+				"Matrï¿½cula: " + this.getMatricula();
 	}   
 	
 	
