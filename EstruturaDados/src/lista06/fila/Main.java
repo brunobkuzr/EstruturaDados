@@ -1,11 +1,14 @@
 package lista06.fila;
 
+import lista06.fila.filaLista.FilaLista;
 import lista06.fila.filaVetor.FilaVetor;
 
 public class Main {
 	
 	public static void main(String[] args) {
-	FilaVetor<Integer> fila = new FilaVetor<Integer>(3);
+		
+		System.out.println("\n Fila Vetor \n");
+		FilaVetor<Integer> fila = new FilaVetor<Integer>(3);
 		
 		fila.inserir(2);
 		fila.inserir(5);
@@ -28,6 +31,16 @@ public class Main {
 		
 		System.out.println("Concatenação das filas");
 		System.out.println(fila3.toString());
+		
+		System.out.println("\n Fila Lista \n");
+		
+		FilaLista<Integer> filaLista = new FilaLista<>();
+		
+		filaLista.inserir(2);
+		filaLista.inserir(5);
+		filaLista.inserir(7);
+		
+		
+		
 	}
-
 }
