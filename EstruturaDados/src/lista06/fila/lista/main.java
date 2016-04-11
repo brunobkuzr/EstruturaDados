@@ -1,9 +1,7 @@
-package lista06.fila;
+package lista06.fila.lista;
 
-import lista06.fila.lista.FilaVetor;
-
-public class Main {
-	
+public class main 
+{
 	public static void main(String[] args) {
 	
 		FilaVetor<Integer> fila = new FilaVetor<Integer>(3);
@@ -27,7 +25,5 @@ public class Main {
 		FilaVetor<Integer> fila3 = fila.concatenar(fila2);
 		
 		System.out.println(fila3.toString());
-
 	}
-
 }
