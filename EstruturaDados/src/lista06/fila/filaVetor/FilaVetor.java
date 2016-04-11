@@ -1,4 +1,6 @@
-package lista06.fila.lista;
+package lista06.fila.filaVetor;
+
+import lista06.fila.Fila;
 
 public class FilaVetor <T> implements Fila<T>
 {
@@ -133,7 +135,7 @@ public class FilaVetor <T> implements Fila<T>
 			
 			if(info[pos] != null) {
 				
-				str += info[pos];
+				str += info[pos] + ",";
 				
 				pos++;
 				

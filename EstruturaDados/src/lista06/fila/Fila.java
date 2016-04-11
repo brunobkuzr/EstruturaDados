@@ -1,4 +1,4 @@
-package lista06.fila.lista;
+package lista06.fila;
 
 public interface Fila  <T>
 {
