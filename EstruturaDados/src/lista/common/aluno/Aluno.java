@@ -59,7 +59,7 @@ public class Aluno implements Comparable<Aluno> {
 	public String toString() {
 		return "Nome: " + this.getNome() + "\n" +
 			   "CPF: " + this.getCpf() + "\n"	+
-				"Matr�cula: " + this.getMatricula();
+				"Matrícula: " + this.getMatricula() + "\n";
 	}   
 	
 	

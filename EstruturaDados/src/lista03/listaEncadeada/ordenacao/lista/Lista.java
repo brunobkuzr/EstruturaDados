@@ -1,11 +1,11 @@
-package lista02.listaEncadeada.dadosAbstratos.lista;
+package lista03.listaEncadeada.ordenacao.lista;
 
 import lista.common.exception.ListaVaziaException;
 /**
 *
 * @author Leonardo Fiedler
 */
-public class Lista <T>
+public class Lista <T extends Comparable<T>>
 {
 
 	private NoLista<T> primeiro;
@@ -192,4 +192,33 @@ public class Lista <T>
 		}
 		return nova;
 	}
+	
+    public void inserirOrdenado(T info) 
+    {
+    	
+    	NoLista<T> p = this.primeiro;
+    	NoLista<T> anterior = null;
+    	while (p != null && p.getInfo().compareTo(info) < 0)
+    	{
+    		anterior = p;
+    		p = p.getProximo();
+    	}
+    	
+    	
+		NoLista<T> novoNo = new NoLista<>();
+    	novoNo.setInfo(info);
+    	
+    	if (anterior == null) 
+    	{
+    		novoNo.setProximo(primeiro);
+    		this.primeiro = novoNo;
+    		
+		} else {
+			novoNo.setProximo(p);
+			anterior.setProximo(novoNo);	
+		}        
+	
+    }
+
+	
 }

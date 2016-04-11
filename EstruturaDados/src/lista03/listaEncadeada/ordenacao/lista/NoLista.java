@@ -1,4 +1,4 @@
-package lista02.listaEncadeada.dadosAbstratos.lista;
+package lista03.listaEncadeada.ordenacao.lista;
 
 /**
 *
