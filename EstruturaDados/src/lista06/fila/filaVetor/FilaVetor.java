@@ -12,7 +12,6 @@ public class FilaVetor <T> implements Fila<T>
 	
 	public FilaVetor(int limite) {
 		this.setLimite(limite);
-		//this.info0);
 		this.setTamanhoAtual(0);
 		this.info = (T[]) new Object[limite];
 	}
@@ -93,7 +92,7 @@ public class FilaVetor <T> implements Fila<T>
 	@Override
 	public void liberar() {
 		if (this.estaVazia())
-			throw new RuntimeException("A fila est� vazia");
+			throw new RuntimeException("A fila está vazia");
 		
 		for (int i = 0; i < this.getLimite(); i++) {
 			info[i] = null;

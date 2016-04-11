@@ -91,9 +91,12 @@ public class Lista <T extends Comparable<T>>
 			{
 				primeiro = p.getProximo();
 				
-			} else {
-				anterior.setProximo(p.getProximo());
-			}
+			} else if (anterior.getProximo() == ultimo){
+				ultimo = anterior;
+				anterior.setProximo(null);
+			} else{
+					anterior.setProximo(p.getProximo());	
+				}
 		}
 	}
 	
@@ -226,5 +229,15 @@ public class Lista <T extends Comparable<T>>
     		this.ultimo = no;
     	}
     }
+
+	public void setPrimeiro(NoLista<T> primeiro) {
+		this.primeiro = primeiro;
+	}
+
+	public void setUltimo(NoLista<T> ultimo) {
+		this.ultimo = ultimo;
+	}
+    
+    
 	
 }

@@ -4,10 +4,15 @@ package lista06.fila.filaLista;
 import lista.common.exception.ListaVaziaException;
 import lista06.fila.Fila;
 import lista06.fila.filaLista.lista.Lista;
+import lista06.fila.filaLista.lista.NoLista;
 
 public class FilaLista<T extends Comparable<T>> implements Fila<T> {
 
 	private Lista<T> lista;
+	
+	public FilaLista() {
+		lista = new Lista<T>();
+	}
 	
 	@Override
 	public void inserir(T valor) {
@@ -41,10 +46,26 @@ public class FilaLista<T extends Comparable<T>> implements Fila<T> {
 
 	@Override
 	public void liberar() {
+		if (this.estaVazia())
+			throw new RuntimeException("A fila está vazia");
 		
+		NoLista<T> no = lista.getPrimeiro();
+		NoLista<T> proximo = null;
+		while (no != null)
+		{
+			proximo = no.getProximo();
+			no.setInfo(null);
+			no.setProximo(null);
+			no = proximo;
+		}
 		
+		lista.setPrimeiro(null);
+		lista.setUltimo(null);
 	}
 	
-	
+	public void exibir() throws ListaVaziaException
+	{
+		lista.exibir();
+	}
 
 }

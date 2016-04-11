@@ -1,5 +1,6 @@
 package lista06.fila;
 
+import lista.common.exception.ListaVaziaException;
 import lista06.fila.filaLista.FilaLista;
 import lista06.fila.filaVetor.FilaVetor;
 
@@ -7,7 +8,7 @@ public class Main {
 	
 	public static void main(String[] args) {
 		
-		System.out.println("\n Fila Vetor \n");
+ 		System.out.println("\n Fila Vetor \n");
 		FilaVetor<Integer> fila = new FilaVetor<Integer>(3);
 		
 		fila.inserir(2);
@@ -33,14 +34,31 @@ public class Main {
 		System.out.println(fila3.toString());
 		
 		System.out.println("\n Fila Lista \n");
+		try {		
+			FilaLista<Integer> filaLista = new FilaLista<>();
+			
+			filaLista.inserir(2);
+			filaLista.inserir(5);
+			filaLista.inserir(7);
+			
+			System.out.println("Exibir - Antes de remover");
 		
-		FilaLista<Integer> filaLista = new FilaLista<>();
-		
-		filaLista.inserir(2);
-		filaLista.inserir(5);
-		filaLista.inserir(7);
-		
-		
-		
+			filaLista.exibir();
+			filaLista.retirar();
+			
+			System.out.println("Exibir - Após remover");
+			filaLista.exibir();
+			
+			System.out.println("Peek... " + filaLista.peek());
+			
+			System.out.println("Está vazia?... " + filaLista.estaVazia());
+			
+			filaLista.liberar();
+			
+			System.out.println("E agora?... " + filaLista.estaVazia());
+			
+		} catch (ListaVaziaException e) {
+			e.printStackTrace();
+		}
 	}
 }
