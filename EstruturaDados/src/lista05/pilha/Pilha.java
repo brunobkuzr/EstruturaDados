@@ -1,6 +1,6 @@
-package lista05.pilha.lista;
+package lista05.pilha;
 
-public interface Pilha  <T extends Comparable<T>>  {
+public interface Pilha  <T>  {
 	
 	public abstract void push(T info) throws Exception ;
 	

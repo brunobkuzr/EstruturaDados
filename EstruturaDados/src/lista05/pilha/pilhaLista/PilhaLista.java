@@ -1,8 +1,9 @@
-package lista05.pilha.lista;
+package lista05.pilha.pilhaLista;
 
 import lista.common.exception.ListaVaziaException;
 import lista03.listaEncadeada.ordenacao.lista.Lista;
 import lista03.listaEncadeada.ordenacao.lista.NoLista;
+import lista05.pilha.Pilha;
 
 public class PilhaLista <T extends Comparable<T>> implements Pilha<T>
 {
@@ -21,7 +22,7 @@ public class PilhaLista <T extends Comparable<T>> implements Pilha<T>
 	@Override
 	public T pop() throws Exception {
 		if (estaVazia()) 
-			throw new Exception("Lista est� vazia");
+			throw new Exception("Pilha está vazia");
 			
 		T valor = (T) lista.getPrimeiro().getInfo();
 		
@@ -32,7 +33,7 @@ public class PilhaLista <T extends Comparable<T>> implements Pilha<T>
 	@Override
 	public T peek() throws Exception {
 		if (estaVazia()) 
-			throw new Exception("Lista est� vazia");
+			throw new Exception("Pilha está vazia");
 			
 		T valor = (T) lista.getPrimeiro().getInfo();
 		
@@ -60,8 +61,19 @@ public class PilhaLista <T extends Comparable<T>> implements Pilha<T>
 	}
 	
 	
-	public void exibir() throws ListaVaziaException{
-		lista.exibir();
+	public String toString()
+	{	
+		String str = "";
+		try {
+			for (int i = (lista.obterComprimento()-1); i >= 0; i--) {
+				NoLista<T> info = lista.getNo(i);
+				str += info.getInfo().toString() +  (i > 0 ? ", " : "");
+			}
+			 	
+		} catch (ListaVaziaException lve){
+			lve.getMessage();
+		}
+		return str;
 	}
 	
 }

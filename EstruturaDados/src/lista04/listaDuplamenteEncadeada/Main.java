@@ -18,25 +18,25 @@ public class Main {
 		lista.inserir(num3);
 		
 		
-		System.out.println("Exibindo em ordem normal \n");
+		System.out.println("Exibindo em ordem normal");
 		lista.exibir();
 		
 		
-		System.out.println("Buscando um valor \n");
+		System.out.println("Buscando um valor");
 		NoListaDupla<Integer> busca = lista.buscar(100);
 		System.out.println("Busca " + busca.getInfo());
 		
-		System.out.println("Removendo e exebindo \n");
-		//lista.retirar(num3);
-		//lista.exibir();
+		System.out.println("Removendo e exebindo");
+		lista.retirar(1);
+		lista.exibir();
 		
-		System.out.println("Exibindo em ordem inversa \n");
+		System.out.println("Exibindo em ordem inversa");
 		lista.exibirOrdemInversa();
 		
 		System.out.println("Liberando \n");
 		lista.liberar();
 		
-		System.out.println("Exibindo liberado \n");
+		System.out.println("Exibindo liberado");
 		
 		lista.exibir();
 

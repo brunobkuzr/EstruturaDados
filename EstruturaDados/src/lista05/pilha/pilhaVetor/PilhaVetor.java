@@ -1,10 +1,13 @@
-package lista05.pilha.lista;
+package lista05.pilha.pilhaVetor;
 
-public class PilhaVetor <T extends Comparable<T>> implements Pilha<T>  {
-	private T info[];
+import java.lang.reflect.Array;
+
+import lista05.pilha.Pilha;
+
+public class PilhaVetor <T> implements Pilha<T>  {
+	private T[] info;
 	private int limite;
 	private int tamanhoAtual;
-	
 	
 	public int getLimite() {
 		return limite;
@@ -26,12 +29,13 @@ public class PilhaVetor <T extends Comparable<T>> implements Pilha<T>  {
 	{
 		this.setLimite(limite);
 		this.info = (T[]) new Object[limite];
+		//(T[]) new Object[limite];
 	}
 	
 	@Override
 	public void push(T info) throws Exception {
 		if (limite == tamanhoAtual)
-			throw new Exception("Pilha j� est� cheia");
+			throw new Exception("Pilha já está cheia");
 		
 		this.info[tamanhoAtual] = info;
 		this.tamanhoAtual++;
@@ -40,7 +44,7 @@ public class PilhaVetor <T extends Comparable<T>> implements Pilha<T>  {
 	@Override
 	public T pop() throws Exception {
 		if (tamanhoAtual == 0)
-			throw new Exception("pilha est� vazia.");
+			throw new Exception("pilha está vazia.");
 		
 		
 		return this.info[--this.tamanhoAtual];
@@ -49,7 +53,7 @@ public class PilhaVetor <T extends Comparable<T>> implements Pilha<T>  {
 	@Override
 	public T peek() throws Exception {
 		if (tamanhoAtual == 0)
-			throw new Exception("pilha est� vazia.");
+			throw new Exception("pilha está vazia.");
 		
 		return this.info[tamanhoAtual - 1];
 	}
@@ -73,7 +77,7 @@ public class PilhaVetor <T extends Comparable<T>> implements Pilha<T>  {
 	public String toString() {
 		String str = "";
 		for (int i = tamanhoAtual-1; i >= 0; i--) {
-			str += this.info[i] +  (i > 0 ? ", " : "");
+			str += this.info[i].toString() +  (i > 0 ? ", " : "");
 		}
 		
 		return str;
