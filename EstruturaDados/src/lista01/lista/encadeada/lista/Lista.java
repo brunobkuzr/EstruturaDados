@@ -13,7 +13,8 @@ public class Lista
 {
 	private NoLista primeiro;
 
-	public Lista(){
+	public Lista()
+	{
 		primeiro = null;
 	}
 	
@@ -127,7 +128,4 @@ public class Lista
 		
 		return anterior.getInfo();
 	}
-	
-
-
 }

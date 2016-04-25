@@ -10,47 +10,58 @@ public class FilaVetor <T> implements Fila<T>
 	private int tamanhoAtual;
 	private int inicio;
 	
-	public FilaVetor(int limite) {
+	public FilaVetor(int limite) 
+	{
 		this.setLimite(limite);
 		this.setTamanhoAtual(0);
 		this.info = (T[]) new Object[limite];
 	}
 	
-	public T[] getInfo() {
+	public T[] getInfo() 
+	{
 		return info;
 	}
 
-	public void setInfo(T[] info) {
+	public void setInfo(T[] info) 
+	{
 		this.info = info;
 	}
 
-	public int getLimite() {
+	public int getLimite() 
+	{
 		return limite;
 	}
 
-	public void setLimite(int limite) {
+	public void setLimite(int limite) 
+	{
 		this.limite = limite;
 	}
 
-	public int getTamanhoAtual() {
+	public int getTamanhoAtual() 
+	{
 		return tamanhoAtual;
 	}
 
-	public void setTamanhoAtual(int tamanhoAtual) {
+	public void setTamanhoAtual(int tamanhoAtual) 
+	{
 		this.tamanhoAtual = tamanhoAtual;
 	}
 
-	public int getInicio() {
+	public int getInicio() 
+	{
 		return inicio;
 	}
 
-	public void setInicio(int inicio) {
+	public void setInicio(int inicio) 
+	{
 		this.inicio = inicio;
 	}
 
 	@Override
-	public void inserir(T valor) {
-		if (this.getTamanhoAtual() == this.getLimite()) {
+	public void inserir(T valor) 
+	{
+		if (this.getTamanhoAtual() == this.getLimite()) 
+		{
 			throw new RuntimeException("Limite excedido");
 		}
 		
@@ -61,9 +72,10 @@ public class FilaVetor <T> implements Fila<T>
 	}
 
 	@Override
-	public T retirar() {
+	public T retirar() 
+	{
 		if (this.estaVazia())
-			throw new RuntimeException("A fila est� vazia");
+			throw new RuntimeException("A fila esta vazia");
 		
 		T val = info[this.getInicio()];
 		
@@ -75,9 +87,10 @@ public class FilaVetor <T> implements Fila<T>
 	}
 
 	@Override
-	public T peek() {
+	public T peek() 
+	{
 		if (this.estaVazia())
-			throw new RuntimeException("A fila est� vazia");
+			throw new RuntimeException("A fila esta vazia");
 		
 			int posicao = (this.getInicio() + 1) % this.getLimite();
 			T val = info[posicao];
@@ -92,7 +105,7 @@ public class FilaVetor <T> implements Fila<T>
 	@Override
 	public void liberar() {
 		if (this.estaVazia())
-			throw new RuntimeException("A fila está vazia");
+			throw new RuntimeException("A fila esta vazia");
 		
 		for (int i = 0; i < this.getLimite(); i++) {
 			info[i] = null;
@@ -113,7 +126,8 @@ public class FilaVetor <T> implements Fila<T>
 		}
 		
 		int inicio2 = f2.getInicio();
-		for (int i = 0; i < f2.getTamanhoAtual(); i++) {
+		for (int i = 0; i < f2.getTamanhoAtual(); i++) 
+		{
 			T val = f2.info[inicio2];
 			inicio2 = (this.getInicio() + 1) % this.getLimite();
 			f3.inserir(val);
@@ -124,15 +138,18 @@ public class FilaVetor <T> implements Fila<T>
 	}
 	
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		
 		int inicio = this.getInicio();
 		int pos = inicio;
 		String str = "";
 		
-		do {
+		do 
+		{
 			
-			if(info[pos] != null) {
+			if(info[pos] != null) 
+			{
 				
 				str += info[pos] + ",";
 				
@@ -142,9 +159,11 @@ public class FilaVetor <T> implements Fila<T>
 					pos = 0;
 				}
 				
-			} else {
+			} else 
+			{
 				pos++;
-				if (pos > (this.getTamanhoAtual()-1)) {
+				if (pos > (this.getTamanhoAtual()-1)) 
+				{
 					pos = 0;
 				}
 				
@@ -153,6 +172,5 @@ public class FilaVetor <T> implements Fila<T>
 		} while (pos != inicio);
 		
 		return str;
-	}
-	
+	}	
 }

@@ -35,7 +35,5 @@ public class NoListaDupla <T extends Comparable<T>>
 	public NoListaDupla<T> getAnterior()
 	{
 		return anterior;
-	}
-	
-	
+	}	
 }

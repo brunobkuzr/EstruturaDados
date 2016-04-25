@@ -3,8 +3,10 @@ package lista04.listaDuplamenteEncadeada;
 import lista04.listaDuplamenteEncadeada.lista.ListaDupla;
 import lista04.listaDuplamenteEncadeada.lista.NoListaDupla;
 
-public class Main {
-	public static void main(String[] args) {
+public class Main 
+{
+	public static void main(String[] args) 
+	{
 		
 		ListaDupla<Integer> lista = new ListaDupla<Integer>();
 		Integer num1 = new Integer(1);
@@ -39,6 +41,5 @@ public class Main {
 		System.out.println("Exibindo liberado");
 		
 		lista.exibir();
-
 	}
 }

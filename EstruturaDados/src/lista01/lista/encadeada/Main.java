@@ -4,9 +4,11 @@ import lista.common.exception.ListaVaziaException;
 import lista01.lista.encadeada.lista.Lista;
 import lista01.lista.encadeada.lista.NoLista;
 
-public class Main {
+public class Main 
+{
 
-	public static void main(String[] args) {
+	public static void main(String[] args) 
+	{
 		
 		Lista lista = new Lista();
 		lista.inserir(10);
@@ -17,7 +19,7 @@ public class Main {
 		{
 			System.out.println("Exibição da lista...");
 			lista.exibir();	
-			
+			System.out.println("Comprimento da lista... " + lista.obterComprimento());
 			System.out.println("Busca da lista...");
 			
 			NoLista busca = lista.buscar(15);
@@ -25,6 +27,7 @@ public class Main {
 			
 			System.out.println("Retirada da lista...");
 			lista.retirar(10);
+			System.out.println("Exibição da lista...");
 			lista.exibir();
 			
 			System.out.println("Comprimento da lista... " + lista.obterComprimento());

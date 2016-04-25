@@ -5,9 +5,11 @@ import lista.common.exception.ListaVaziaException;
 import lista03.listaEncadeada.ordenacao.lista.Lista;
 import lista03.listaEncadeada.ordenacao.lista.NoLista;
 
-public class Main {
+public class Main
+{
 
-	public static void main(String[] args) {
+	public static void main(String[] args) 
+	{
 		//Criação da lista
 		Lista<Aluno> listaAlu = new Lista<Aluno>();
     	
@@ -38,13 +40,15 @@ public class Main {
     	no4.setInfo(alu04);
     	listaAlu.inserirOrdenado(no4.getInfo());
     	
-    	try {
+    	try 
+    	{
     	
     		//Exibição
     		System.out.println("Exibindo os alunos em ordem");
 			listaAlu.exibir();
 			
-		} catch (ListaVaziaException e) {
+		} catch (ListaVaziaException e)
+    	{
 			e.printStackTrace();
 		}
     	

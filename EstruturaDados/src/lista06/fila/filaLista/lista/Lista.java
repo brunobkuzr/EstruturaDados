@@ -21,9 +21,11 @@ public class Lista <T extends Comparable<T>>
 	{
 		NoLista<T> no = new NoLista<T>();
 		no.setInfo(info);
-		if (estaVazia()) {
+		if (estaVazia()) 
+		{
 			primeiro = no;
-		} else {
+		} else 
+		{
 			NoLista<T> p = primeiro;
 			primeiro = no;
 			no.setProximo(p);
@@ -77,7 +79,8 @@ public class Lista <T extends Comparable<T>>
 		boolean achou = false;
 		while (p != null)
 		{
-			if(p.getInfo().equals(info)) {
+			if(p.getInfo().equals(info)) 
+			{
 				achou = true;
 				break;
 			}
@@ -91,12 +94,14 @@ public class Lista <T extends Comparable<T>>
 			{
 				primeiro = p.getProximo();
 				
-			} else if (anterior.getProximo() == ultimo){
+			} else if (anterior.getProximo() == ultimo)
+			{
 				ultimo = anterior;
 				anterior.setProximo(null);
-			} else{
+			} else
+			{
 					anterior.setProximo(p.getProximo());	
-				}
+			}
 		}
 	}
 	
@@ -163,7 +168,8 @@ public class Lista <T extends Comparable<T>>
 		int i = 0;
 		while (p != null)
 		{
-			if(i <= idx) {
+			if(i <= idx) 
+			{
 				i++;
 				anterior = p;
 				p = p.getProximo();	
@@ -208,7 +214,8 @@ public class Lista <T extends Comparable<T>>
     		novoNo.setProximo(primeiro);
     		this.primeiro = novoNo;
     		
-		} else {
+		} else 
+		{
 			novoNo.setProximo(p);
 			anterior.setProximo(novoNo);	
 		}        
@@ -224,20 +231,20 @@ public class Lista <T extends Comparable<T>>
     	{
     		this.primeiro = no;
     		this.ultimo = no;
-    	} else {
+    	} else 
+    	{
     		this.ultimo.setProximo(no);
     		this.ultimo = no;
     	}
     }
 
-	public void setPrimeiro(NoLista<T> primeiro) {
+	public void setPrimeiro(NoLista<T> primeiro) 
+	{
 		this.primeiro = primeiro;
 	}
 
-	public void setUltimo(NoLista<T> ultimo) {
+	public void setUltimo(NoLista<T> ultimo) 
+	{
 		this.ultimo = ultimo;
 	}
-    
-    
-	
 }

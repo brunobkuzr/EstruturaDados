@@ -4,9 +4,11 @@ import lista.common.exception.ListaVaziaException;
 import lista06.fila.filaLista.FilaLista;
 import lista06.fila.filaVetor.FilaVetor;
 
-public class Main {
+public class Main
+{
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) 
+	{
 		
  		System.out.println("\n Fila Vetor \n");
 		FilaVetor<Integer> fila = new FilaVetor<Integer>(3);
@@ -22,6 +24,11 @@ public class Main {
 		System.out.println("toString - Após remover");
 		System.out.println(fila.toString());
 		
+		System.out.println("Liberando...");
+		fila.liberar();
+		System.out.println("toString - Após liberar");
+		System.out.println(fila.toString());
+		
 		FilaVetor<Integer> fila2 = new FilaVetor<Integer>(5);
 		
 		fila2.inserir(3);
@@ -34,7 +41,8 @@ public class Main {
 		System.out.println(fila3.toString());
 		
 		System.out.println("\n Fila Lista \n");
-		try {		
+		try 
+		{		
 			FilaLista<Integer> filaLista = new FilaLista<>();
 			
 			filaLista.inserir(2);
@@ -57,7 +65,8 @@ public class Main {
 			
 			System.out.println("E agora?... " + filaLista.estaVazia());
 			
-		} catch (ListaVaziaException e) {
+		} catch (ListaVaziaException e) 
+		{
 			e.printStackTrace();
 		}
 	}

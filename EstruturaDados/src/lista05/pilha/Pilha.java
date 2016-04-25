@@ -1,6 +1,7 @@
 package lista05.pilha;
 
-public interface Pilha  <T>  {
+public interface Pilha  <T>  
+{
 	
 	public abstract void push(T info) throws Exception ;
 	

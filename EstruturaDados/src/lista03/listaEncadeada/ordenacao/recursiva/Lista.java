@@ -58,6 +58,5 @@ public class Lista <T extends Comparable<T>>
 	 public NoLista<T> getPrimeiro()
 	 {
 		 return primeiro;
-	 }
-	
+	 }	
 }

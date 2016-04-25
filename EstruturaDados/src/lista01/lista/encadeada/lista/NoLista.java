@@ -14,11 +14,13 @@ public class NoLista {
 		setInfo(info);
 	}
 	
-	public int getInfo() {
+	public int getInfo() 
+	{
 		return info;
 	}
 	
-	public void setInfo(int info) {
+	public void setInfo(int info) 
+	{
 		this.info = info;
 	}
 	

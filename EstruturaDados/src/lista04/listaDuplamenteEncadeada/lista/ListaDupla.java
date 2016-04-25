@@ -4,9 +4,8 @@ public class ListaDupla <T extends Comparable<T>>
 {
 	private NoListaDupla<T> primeiro;
 	
-	public ListaDupla(){
-		
-	}
+	public ListaDupla()
+	{ }
 	
 	public void inserir(T info)
 	{
@@ -25,7 +24,8 @@ public class ListaDupla <T extends Comparable<T>>
 	public void exibir()
 	{
 		NoListaDupla<T> p = primeiro;
-		while (p != null) {
+		while (p != null) 
+		{
 			System.out.println(p.getInfo());
 			p = p.getProximo();
 		}
@@ -39,7 +39,8 @@ public class ListaDupla <T extends Comparable<T>>
 		boolean achei = false;
 		while (p != null && !achei)
 		{
-			if (p.getInfo().equals(info)) {
+			if (p.getInfo().equals(info)) 
+			{
 				achei = true;
 			} else
 				p = p.getProximo();
@@ -53,8 +54,10 @@ public class ListaDupla <T extends Comparable<T>>
 		NoListaDupla<T> p = primeiro;
 		while (p != null)
 		{
-			if (p.getInfo().equals(info)) {
-				if (p == primeiro) {
+			if (p.getInfo().equals(info)) 
+			{
+				if (p == primeiro)
+				{
 					primeiro = p.getProximo();
 					break;	
 				}
@@ -79,7 +82,8 @@ public class ListaDupla <T extends Comparable<T>>
 		while (p != null)
 		{
 			
-			if (p != primeiro) {
+			if (p != primeiro) 
+			{
 				p.getAnterior().setProximo(null);
 				p.setAnterior(null);
 			} else
@@ -88,7 +92,6 @@ public class ListaDupla <T extends Comparable<T>>
 			p = p.getProximo();
 		}
 	}
-	
 	
 	public void exibirOrdemInversa()
 	{
@@ -100,8 +103,6 @@ public class ListaDupla <T extends Comparable<T>>
 			p = p.getProximo();
 			
 		}
-		
-		
 		
 		while (aux != null)
 		{

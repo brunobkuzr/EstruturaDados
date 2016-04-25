@@ -6,46 +6,57 @@ import lista06.fila.Fila;
 import lista06.fila.filaLista.lista.Lista;
 import lista06.fila.filaLista.lista.NoLista;
 
-public class FilaLista<T extends Comparable<T>> implements Fila<T> {
+public class FilaLista<T extends Comparable<T>> implements Fila<T> 
+{
 
 	private Lista<T> lista;
 	
-	public FilaLista() {
+	public FilaLista() 
+	{
 		lista = new Lista<T>();
 	}
 	
 	@Override
-	public void inserir(T valor) {
-		try {
+	public void inserir(T valor) 
+	{
+		try 
+		{
 			lista.inserirNoFinal(valor);
-		} catch (IndexOutOfBoundsException | ListaVaziaException e) {
+		} catch (IndexOutOfBoundsException | ListaVaziaException e) 
+		{
 			e.getMessage();
 		}
 	}
 
 	@Override
-	public T retirar() {
+	public T retirar() 
+	{
 		T ultimo = lista.obterUltimo();
-		try {
+		try 
+		{
 			lista.retirar(lista.obterUltimo());
-		} catch (ListaVaziaException e) {
+		} catch (ListaVaziaException e) 
+		{
 			e.getMessage();
 		}
 		return ultimo;
 	}
 
 	@Override
-	public T peek() {
+	public T peek() 
+	{
 		return lista.obterUltimo();
 	}
 
 	@Override
-	public boolean estaVazia() {
+	public boolean estaVazia() 
+	{
 		return lista.estaVazia();
 	}
 
 	@Override
-	public void liberar() {
+	public void liberar() 
+	{
 		if (this.estaVazia())
 			throw new RuntimeException("A fila está vazia");
 		
@@ -67,5 +78,4 @@ public class FilaLista<T extends Comparable<T>> implements Fila<T> {
 	{
 		lista.exibir();
 	}
-
 }

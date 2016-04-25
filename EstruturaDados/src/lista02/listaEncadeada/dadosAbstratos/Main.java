@@ -4,9 +4,11 @@ import lista.common.exception.ListaVaziaException;
 import lista02.listaEncadeada.dadosAbstratos.lista.Lista;
 import lista02.listaEncadeada.dadosAbstratos.lista.NoLista;
 
-public class Main {
+public class Main
+{
 
-	public static void main(String[] args) {
+	public static void main(String[] args) 
+	{
 		Lista<Integer> lista = new Lista<Integer>();
 		
 		lista.inserir(10);
@@ -36,7 +38,7 @@ public class Main {
 			
 			Lista<Integer> lista2 = new Lista<Integer>();
 			
-			//lista2.inserir(10);			
+			lista2.inserir(10);			
 			lista2.inserir(15);
 			lista2.inserir(20);
 			
