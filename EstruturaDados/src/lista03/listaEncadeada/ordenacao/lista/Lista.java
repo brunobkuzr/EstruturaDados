@@ -50,13 +50,13 @@ public class Lista <T extends Comparable<T>>
 	public NoLista<T> buscar(T info) throws ListaVaziaException
 	{
 		if (estaVazia())
-			throw new ListaVaziaException("A lista está vazia!");
+			throw new ListaVaziaException("A lista esta vazia!");
 		
 		NoLista<T> p = primeiro;
 		boolean achou = false;
 		while (p != null)
 		{
-			if(p.getInfo().equals(info)) {
+			if(p.getInfo().compareTo(info) == 0) {
 				achou = true;
 				break;
 			}

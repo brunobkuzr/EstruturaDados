@@ -4,7 +4,7 @@ package lista03.listaEncadeada.ordenacao.lista;
 *
 * @author Leonardo Fiedler
 */
-public class NoLista <T> 
+public class NoLista <T extends Comparable<T>> 
 {
 	private T info;
 	private NoLista<T> proximo;

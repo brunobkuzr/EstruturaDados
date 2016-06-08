@@ -1,5 +1,7 @@
 package lista10.ordenacao.classAbstract;
 
+import java.util.Comparator;
+
 public abstract class OrdenacaoAbstract <T extends Comparable<T>> 
 {
 	private T[] info;
@@ -15,6 +17,8 @@ public abstract class OrdenacaoAbstract <T extends Comparable<T>>
 	}
 	
 	public abstract void ordenar();
+	
+	public abstract void ordenar(Comparator<T> comparador);
 	
 	public void setInfoAtIndex(int idx, T val)
 	{
