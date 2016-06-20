@@ -1,7 +1,5 @@
 package lista10.exercioPalavrasTexto;
 
-import java.util.Comparator;
-
 public class Palavra implements Comparable<Palavra>
 {
 	private String palavra;

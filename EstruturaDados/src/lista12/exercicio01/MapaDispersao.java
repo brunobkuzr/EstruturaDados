@@ -35,12 +35,13 @@ public class MapaDispersao <T>
 	public void remover(T dado) throws ListaVaziaException
 	{
 		Lista<T> lista = this.info[calcularHash(dado)];
-		lista.retirar(dado);
+		if (lista != null)
+			lista.retirar(dado);
 	}
 	
 	public T buscar(T dado) throws ListaVaziaException
 	{
 		Lista<T> lista = this.info[calcularHash(dado)];
-		return lista.buscar(dado).getInfo();
+		return lista != null ? lista.buscar(dado).getInfo() : null;
 	}
 }

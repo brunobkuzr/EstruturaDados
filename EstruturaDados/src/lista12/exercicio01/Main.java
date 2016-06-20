@@ -13,7 +13,8 @@ public class Main {
 		mapa.inserir(48);
 		mapa.inserir(33);
 		try {
-			System.out.println(mapa.buscar(48));
+			System.out.println(mapa.buscar(40));
+			mapa.remover(30);
 		} catch (ListaVaziaException e) {
 			e.printStackTrace();
 		}

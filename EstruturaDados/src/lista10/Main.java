@@ -1,5 +1,7 @@
 package lista10;
 
+import lista10.ordenacao.OrdenacaoBolaOtimizado;
+import lista10.ordenacao.OrdenacaoBolha;
 import lista10.ordenacao.OrdenacaoQuickSort;
 
 public class Main {
@@ -17,15 +19,15 @@ public class Main {
 		ordBubble.setInfo(valores);
 		ordBubble.ordenar(); */
 		
-		/*OrdenacaoBolaOtimizado<Integer> ordBubble = new OrdenacaoBolaOtimizado<>();
+		OrdenacaoBolaOtimizado<Integer> ordBubble = new OrdenacaoBolaOtimizado<>();
 		ordBubble.setInfo(valores);
-		ordBubble.ordenar(); */
+		ordBubble.ordenar(); 
 		
-		//System.out.println(ordBubble.toString());
+		System.out.println(ordBubble.toString());
 		
-		OrdenacaoQuickSort<Integer> oqs = new OrdenacaoQuickSort<>();
+		/*OrdenacaoQuickSort<Integer> oqs = new OrdenacaoQuickSort<>();
 		oqs.setInfo(valores);
 		oqs.ordenar();
-		System.out.println(oqs.toString());
+		System.out.println(oqs.toString()); */
 	}
 }

@@ -1,6 +1,6 @@
 package lista07.arvoreBinaria.arvore;
 
-public class NoArvoreBinaria <T extends Comparable<T>>
+public class NoArvoreBinaria <T>
 {
 	private T info;
 	private NoArvoreBinaria<T> esquerda;

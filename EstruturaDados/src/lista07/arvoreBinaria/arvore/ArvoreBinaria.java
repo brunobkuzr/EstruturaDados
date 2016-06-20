@@ -1,6 +1,6 @@
 package lista07.arvoreBinaria.arvore;
 
-public class ArvoreBinaria <T extends Comparable<T>>
+public class ArvoreBinaria <T>
 {
 	private NoArvoreBinaria<T> raiz;
 	
@@ -42,7 +42,7 @@ public class ArvoreBinaria <T extends Comparable<T>>
 	
 	private String arvorePre(NoArvoreBinaria<T> no)
 	{
-		return  no.getInfo().toString() +  (no.getEsquerda() != null ? " " + arvorePre(no.getEsquerda()) : "" ) + 
-				(no.getDireita() != null ?  " " + arvorePre(no.getDireita()) : "");
+		return "<" +  no.getInfo().toString() +  (no.getEsquerda() != null ? " " + arvorePre(no.getEsquerda()) : "<>" ) + 
+				(no.getDireita() != null ?  " " + arvorePre(no.getDireita()) : "<>") + ">";
 	}
 }

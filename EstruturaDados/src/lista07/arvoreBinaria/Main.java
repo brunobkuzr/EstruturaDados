@@ -3,6 +3,7 @@ package lista07.arvoreBinaria;
 import lista07.arvoreBinaria.arvore.ArvoreBinaria;
 import lista07.arvoreBinaria.arvore.NoArvoreBinaria;
 
+
 public class Main {
 
 	public static void main(String[] args) {
@@ -18,10 +19,8 @@ public class Main {
 		
 		arvore.setRaiz(no3);
 		
-		
 		System.out.println("O valor 4 pertence? " + arvore.pertence(4));
 		System.out.println(arvore.toString());
 		
 	}
-
 }

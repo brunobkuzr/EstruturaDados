@@ -6,7 +6,7 @@ public class BuscaLinearVetorOrdenado <T extends Comparable<T>> extends BuscaAbs
 	@Override
 	public int buscar(T chave) {
 		int n = this.getInfo().length;
-		for (int i = 0; i < n-1; i++)
+		for (int i = 0; i <= n-1; i++)
 		{
 			if(this.getInfo()[i].equals(chave))
 				return i;

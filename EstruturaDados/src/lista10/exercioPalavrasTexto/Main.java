@@ -1,6 +1,5 @@
 package lista10.exercioPalavrasTexto;
 
-import java.io.File;
 import java.io.FileNotFoundException;
 import java.nio.file.Path;
 import java.nio.file.Paths;

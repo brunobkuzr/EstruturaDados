@@ -7,8 +7,9 @@ public class BuscaBinaria <T extends Comparable<T>> extends BuscaAbstract<T>
 	public int buscar(T chave) {
 		int n = this.getInfo().length;
 		int inicio = 0, fim = n-1;
+		int meio = 0;
 		while (inicio <= fim) {
-			int meio = (inicio + fim)/2;
+			meio = (inicio + fim)/2;
 			if(chave.compareTo(this.getInfo()[meio]) < 0)
 			{
 				fim = meio - 1;
